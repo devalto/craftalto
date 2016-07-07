@@ -1,0 +1,12 @@
+sudo: false
+
+before_script:
+    - ansible-galaxy install kamaln7.swapfile benwebber.minecraft
+
+script:
+    - ansible-playbook -i production --check playbook.yml
+
+addons:
+    apt:
+        packages:
+            - ansible
