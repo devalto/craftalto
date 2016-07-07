@@ -1,0 +1,12 @@
+- hosts: minecraft
+  roles:
+       - role: kamaln7.swapfile
+         swapfile_size: 1GB
+         swapfile_swappiness: 10
+         swapfile_location: /mnt/swapfile
+       - role: benwebber.minecraft
+         minecraft_version: "1.10"
+         minecraft_whitelist: ["cidsphere", "fstgerm", "ychateauvert", "kaboushi81"]
+         minecraft_ops: ["cidsphere"]
+         minecraft_process_control: "supervisor"
+         minecraft_initial_memory: 512M
