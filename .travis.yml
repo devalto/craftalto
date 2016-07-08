@@ -15,7 +15,7 @@ before_script:
 
 script:
     - ansible-playbook -i tests/inventory --syntax-check playbook.yml
-    - ansible-playbook -i tests/inventory --connection=local --check
+    - ansible-playbook -i tests/inventory --connection=local --check playbook.yml
 
 addons:
     apt:
