@@ -7,7 +7,7 @@ install:
     - pip install ansible
 
 before_script:
-    - ansible-galaxy install -r roles.txt
+    - ansible-galaxy install -r roles.txt -p ./galaxy-roles
 
 script:
     - ansible-playbook -i production --check playbook.yml
