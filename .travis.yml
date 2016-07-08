@@ -1,7 +1,13 @@
 sudo: false
 
+language: python
+python: "2.7"
+
+install:
+    - pip install ansible
+
 before_script:
-    - ansible-galaxy install kamaln7.swapfile benwebber.minecraft
+    - ansible-galaxy install -r roles.txt
 
 script:
     - ansible-playbook -i production --check playbook.yml
@@ -9,5 +15,5 @@ script:
 addons:
     apt:
         packages:
-            - ansible
-            - wget
+            - python-apt
+            - python-pycurl
