@@ -7,7 +7,7 @@
          swapfile_swappiness: 10
          swapfile_location: /mnt/swapfile
        - role: benwebber.minecraft
-         minecraft_version: "1.10"
+         minecraft_version: "1.11"
          minecraft_whitelist: {{ whitelist }}
          minecraft_ops: {{ ops }}
          minecraft_process_control: "supervisor"
