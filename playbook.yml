@@ -1,5 +1,5 @@
 - hosts: minecraft
-  var_files:
+  vars_files:
       - vars/players.yml
   roles:
        - role: kamaln7.swapfile
@@ -7,8 +7,8 @@
          swapfile_swappiness: 10
          swapfile_location: /mnt/swapfile
        - role: benwebber.minecraft
-         minecraft_version: "1.11"
-         minecraft_whitelist: {{ whitelist }}
-         minecraft_ops: {{ ops }}
+         minecraft_version: "1.12.2"
+         minecraft_whitelist: "{{ whitelist }}"
+         minecraft_ops: "{{ ops }}"
          minecraft_process_control: "supervisor"
          minecraft_initial_memory: 512M
